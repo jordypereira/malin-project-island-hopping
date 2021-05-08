@@ -44,7 +44,10 @@
       </div>
 
       <!-- Image -->
-      <img transition.in.duration.500ms :src="`./assets/images/slide${slide}.jpeg`" alt="Group picture of the quartet">
+      <template x-for="item in items">
+        <img x-show.transition.in.duration.500ms="item === String(slide)" :src="`./assets/images/slide${item}.jpeg`"
+          alt="Group picture of the quartet">
+      </template>
 
       <!-- Button Next -->
       <div class="absolute right-0 top-0 h-full flex justify-center items-center">
