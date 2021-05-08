@@ -28,8 +28,12 @@
 </head>
 
 <body class="mx-auto bg-gray-100" style="max-width: 1024px;">
+
+  <!-- Slides -->
   <div class="mt-8 flex justify-center">
     <div class="relative" x-data="slides()">
+
+      <!-- Button Previous -->
       <div class="absolute left-0 top-0 h-full flex justify-center items-center">
         <button x-on:click="setPreviousSlide()" aria-label="previous slide">
           <svg xmlns="http://www.w3.org/2000/svg" class="text-white h-16 w-16" fill="none" viewBox="0 0 24 24"
@@ -38,7 +42,11 @@
           </svg>
         </button>
       </div>
+
+      <!-- Image -->
       <img transition.in.duration.500ms :src="`./assets/images/slide${slide}.jpeg`" alt="Group picture of the quartet">
+
+      <!-- Button Next -->
       <div class="absolute right-0 top-0 h-full flex justify-center items-center">
         <button x-on:click="setNextSlide()" aria-label="next slide">
           <svg xmlns="http://www.w3.org/2000/svg" class="text-white h-16 w-16" fill="none" viewBox="0 0 24 24"
@@ -47,12 +55,15 @@
           </svg>
         </button>
       </div>
+
+      <!-- Text overlay -->
       <div class="absolute w-full bottom-4 text-white flex flex-col items-center">
         <span class="font-chewy text-xl md:text-7xl md:mb-4">Øyhoppende strykekvartett</span>
         <span class="font-chewy text-md md:text-4xl ">Hovedøya - Gressholmen - Langøyene</span>
       </div>
     </div>
   </div>
+  <!-- Intro -->
   <p class="text-center mt-8 mx-4">Velkommen til utendørskonserter på øyene i Oslofjorden i sommer! Vi er en
     strykekvartett
     som
@@ -64,8 +75,9 @@
     oppleve
     musikk ute i naturen når du besøker øyene i Oslofjorden. Her kan du følge med på hvilke tider vi besøker øyene!
   </p>
-  <div class="my-8 flex gap-4 flex-col">
 
+  <!-- Profiles -->
+  <div class="my-8 flex gap-4 flex-col">
     <template x-data="{...bio()}" x-for="(item, index) in items" :key="index">
       <div class="flex justify-center w-full flex-wrap md:flex-nowrap gap-6"
         :class="{'md:flex-row-reverse': index % 2 !== 0}">
@@ -96,7 +108,19 @@
           {
             id: 4,
             alt: 'Elia',
-            text: malinText
+            text: `Malin Mertens spiller cello og studerte utøvende musikk ved Barratt Due
+        musikkinstitutt i Oslo under Kari Ravnan og Ole
+        Eirik Ree, etterfulgt av en mastergrad med Louisa Tuck med avsluttende eksamen i 2019. Under studietiden var hun
+        aktiv
+        som musiker og har opptrådt med flere profesjonelle ensembler og orkestre, inkludert Oslo Filharmonien, Den
+        Norske Opera
+        & Ballet, Kringkastingsorkesteret og Trondheim Symfoniorkester.Hun var en av grunnleggerne av Virentia
+        Strykekvartett,
+        og i løpet av mastergraden spilte hun på en cello utlånt av Dextra Musica.Etter mastergraden jobbet hun ett år
+        med
+        Kungliga Filharmonikerna i Stockholm som orkesterakademist.Siden høsten 2020 jobber hun som frilanser på heltid
+        med
+        base i Oslo, Norge.`
           },
           {
             id: 3,
