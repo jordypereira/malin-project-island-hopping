@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+
+  <title>Øyhoppende strykekvartett</title>
+
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="">
+  <meta property="og:title" content="Øyhoppende strykekvartett">
+  <meta property="og:description" content="Øyhoppende strykekvartett">
+  <meta property="og:image" content="./assets/images/slide1.jpeg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="">
+  <meta property="twitter:title" content="Øyhoppende strykekvartett">
+  <meta property="twitter:description" content="Øyhoppende strykekvartett">
+  <meta property="twitter:image" content="./assets/images/slide1.jpeg">
+</head>
+
+<body class="mx-auto bg-gray-100" style="max-width: 1024px;">
+  <div class="mt-8 flex justify-center">
+    <div class="relative" x-data="slides()">
+      <div class="absolute left-0 top-0 h-full flex justify-center items-center">
+        <button x-on:click="setPreviousSlide()" aria-label="previous slide">
+          <svg xmlns="http://www.w3.org/2000/svg" class="text-white h-16 w-16" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+      </div>
+      <img transition.in.duration.500ms :src="`./assets/images/slide${slide}.jpeg`" alt="Group picture of the quartet">
+      <div class="absolute right-0 top-0 h-full flex justify-center items-center">
+        <button x-on:click="setNextSlide()" aria-label="next slide">
+          <svg xmlns="http://www.w3.org/2000/svg" class="text-white h-16 w-16" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+      </div>
+      <div class="absolute w-full bottom-4 text-white flex flex-col items-center">
+        <span class="font-chewy text-xl md:text-7xl md:mb-4">Øyhoppende strykekvartett</span>
+        <span class="font-chewy text-md md:text-4xl ">Hovedøya - Gressholmen - Langøyene</span>
+      </div>
+    </div>
+  </div>
+  <p class="text-center mt-8 mx-4">Velkommen til utendørskonserter på øyene i Oslofjorden i sommer! Vi er en
+    strykekvartett
+    som
+    sammen har satt sammen et
+    spennende konsertprogram med klassisk musikk med innslag av jazz, folkemusikk og tango. Etter en lang tid uten
+    mulighet
+    til å oppleve levende musikk gleder vi oss veldig til å gi kulturopplevelser tilbake til Oslos befolkning. Øyene i
+    Oslofjorden er et perfekt sted for rekreasjon, piknik, familie og venner. I sommer vil du også få mulighet til å
+    oppleve
+    musikk ute i naturen når du besøker øyene i Oslofjorden. Her kan du følge med på hvilke tider vi besøker øyene!
+  </p>
+  <div class="my-8 flex gap-4 flex-col">
+
+    <template x-data="{...bio()}" x-for="(item, index) in items" :key="index">
+      <div class="flex justify-center w-full flex-wrap md:flex-nowrap gap-6"
+        :class="{'md:flex-row-reverse': index % 2 !== 0}">
+        <img class="md:max-w-48" :src="`./assets/images/${item.id}.jpeg`" :alt="item.alt">
+        <p class="flex items-center px-4 md:px-0" x-text="item.text">
+        </p>
+      </div>
+    </template>
+
+    <img class="mx-auto w-48" src="./assets/images/Furestiftelsen_Logo_Svart-ai.svg" alt="Sponsor logo">
+  </div>
+  <script>
+    function slides() {
+      return {
+        slide: 1,
+        items: ['1', '2', '3'],
+        length: 3,
+        getUrl(id) { return `./assets/images/slide${id}.jpeg` },
+        setPreviousSlide() { this.slide = this.slide === 1 ? this.items.length : this.slide - 1 },
+        setNextSlide() {
+          this.slide = this.slide === this.items.length ? 1 : this.slide + 1
+        },
+      }
+    }
+    function bio() {
+      return {
+        items: [
+          {
+            id: 4,
+            alt: 'Elia',
+            text: malinText
+          },
+          {
+            id: 3,
+            alt: 'Emilia',
+            text: `Malin Mertens spiller cello og studerte utøvende musikk ved Barratt Due
+        musikkinstitutt i Oslo under Kari Ravnan og Ole
+        Eirik Ree, etterfulgt av en mastergrad med Louisa Tuck med avsluttende eksamen i 2019. Under studietiden var hun
+        aktiv
+        som musiker og har opptrådt med flere profesjonelle ensembler og orkestre, inkludert Oslo Filharmonien, Den
+        Norske Opera
+        & Ballet, Kringkastingsorkesteret og Trondheim Symfoniorkester.Hun var en av grunnleggerne av Virentia
+        Strykekvartett,
+        og i løpet av mastergraden spilte hun på en cello utlånt av Dextra Musica.Etter mastergraden jobbet hun ett år
+        med
+        Kungliga Filharmonikerna i Stockholm som orkesterakademist.Siden høsten 2020 jobber hun som frilanser på heltid
+        med
+        base i Oslo, Norge.`
+          },
+          {
+            id: 2,
+            alt: 'Heidi',
+            text: `Malin Mertens spiller cello og studerte utøvende musikk ved Barratt Due
+        musikkinstitutt i Oslo under Kari Ravnan og Ole
+        Eirik Ree, etterfulgt av en mastergrad med Louisa Tuck med avsluttende eksamen i 2019. Under studietiden var hun
+        aktiv
+        som musiker og har opptrådt med flere profesjonelle ensembler og orkestre, inkludert Oslo Filharmonien, Den
+        Norske Opera
+        & Ballet, Kringkastingsorkesteret og Trondheim Symfoniorkester.Hun var en av grunnleggerne av Virentia
+        Strykekvartett,
+        og i løpet av mastergraden spilte hun på en cello utlånt av Dextra Musica.Etter mastergraden jobbet hun ett år
+        med
+        Kungliga Filharmonikerna i Stockholm som orkesterakademist.Siden høsten 2020 jobber hun som frilanser på heltid
+        med
+        base i Oslo, Norge.`
+          },
+          {
+            id: 1,
+            alt: 'Malin Mertens, Cellist',
+            text: `Malin Mertens spiller cello og studerte utøvende musikk ved Barratt Due
+        musikkinstitutt i Oslo under Kari Ravnan og Ole
+        Eirik Ree, etterfulgt av en mastergrad med Louisa Tuck med avsluttende eksamen i 2019. Under studietiden var hun
+        aktiv
+        som musiker og har opptrådt med flere profesjonelle ensembler og orkestre, inkludert Oslo Filharmonien, Den
+        Norske Opera
+        & Ballet, Kringkastingsorkesteret og Trondheim Symfoniorkester.Hun var en av grunnleggerne av Virentia
+        Strykekvartett,
+        og i løpet av mastergraden spilte hun på en cello utlånt av Dextra Musica.Etter mastergraden jobbet hun ett år
+        med
+        Kungliga Filharmonikerna i Stockholm som orkesterakademist.Siden høsten 2020 jobber hun som frilanser på heltid
+        med
+        base i Oslo, Norge.`
+          },
+        ],
+      }
+    }
+  </script>
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>
