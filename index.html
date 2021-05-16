@@ -88,9 +88,9 @@
 
 
   <!-- Profiles -->
-  <div class="my-8 flex gap-4 flex-col">
+  <div class="my-8 flex space-y-8 flex-col">
     <template x-data="{...bio()}" x-for="(item, index) in items" :key="index">
-      <div class="flex justify-center w-full flex-wrap md:flex-nowrap gap-6"
+      <div class="flex justify-center w-full flex-wrap md:flex-nowrap space-y-6 lg:space-x-6"
         :class="{'md:flex-row-reverse': index % 2 !== 0}">
         <div>
           <img width="192" height="288" class="md:max-w-48 h-auto" :src="`./assets/images/${item.id}.jpeg`"
