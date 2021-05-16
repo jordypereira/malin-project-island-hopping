@@ -8,6 +8,9 @@
   <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer></script>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="" />
 
   <title>Øyhoppende strykekvartett</title>
 
@@ -79,6 +82,10 @@
     oppleve
     musikk ute i naturen når du besøker øyene i Oslofjorden. Her kan du følge med på hvilke tider vi besøker øyene!
   </p>
+
+  <!-- Map -->
+  <div id="mapid" class="h-400px w-full mx-auto mt-4"></div>
+
 
   <!-- Profiles -->
   <div class="my-8 flex gap-4 flex-col">
@@ -179,6 +186,10 @@
       }
     }
   </script>
+  <script type="module">
+    import typesLeaflet from 'https://cdn.skypack.dev/@types/leaflet';
+  </script>
+  <script type="module" src="/map.ts"></script>
   <script type="module" src="/main.js"></script>
 </body>
 
