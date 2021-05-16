@@ -4,7 +4,8 @@ export default defineConfig({
   theme: {
     extend: {
       fontFamily: {
-        chewy: ['Chewy', 'serif'],
+        sans: ["Open Sans", 'ui-sans-serif', 'system-ui'],
+        secondary: ['chewy', 'serif'],
       },
     }
   },
