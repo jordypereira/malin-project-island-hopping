@@ -34,10 +34,7 @@ function getEventText ({id, day, hour, hour2, minute = '00'}) {
 
 events.forEach((e) => {
   const eventText = getEventText(e)
-  var tempMarker = L.marker(e.points, {
-    riseOnHover: true,
+  const marker = L.marker(e.points, {
     icon: myIcon
-  }).addTo(map);
-  tempMarker.bindTooltip(eventText);
-  tempMarker.bindPopup(eventText);
+  }).addTo(map).bindTooltip(eventText, { permanent: false });
 })
