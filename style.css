@@ -2,11 +2,6 @@
     max-height: none;
 }
 
-@font-face {
-  font-family: roxborough;
-  src: url("assets/fonts/roxborough-cf-regular.ttf");
-}
-
 p {
   @apply font-sans;
 }
