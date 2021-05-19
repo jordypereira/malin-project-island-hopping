@@ -62,7 +62,7 @@
 
         <!-- Image -->
         <template x-for="item in items">
-          <img width="1024" height="682.484" x-show.transition.in.duration.500ms="item === String(slide)"
+          <img width="1024" height="682.484" x-show="item === String(slide)"
             :src="`./assets/images/slide${item}-1024w.jpg`" alt="Bilde av strykekvartett" :srcset="`./assets/images/slide${item}-1024w.jpg 1024w, 
           ./assets/images/slide${item}-768w.jpg 768w, 
           ./assets/images/slide${item}-360w.jpg 360w`" sizes="(max-width: 360px) 360px, (max-width: 768px) 768px,
