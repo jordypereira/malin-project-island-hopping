@@ -7,6 +7,7 @@
     "serve": "vite preview"
   },
   "devDependencies": {
+    "@types/node": "^15.12.1",
     "vite": "^2.0.0-beta.70",
     "vite-plugin-windicss": "^0.15.10",
     "windicss": "^2.5.14"

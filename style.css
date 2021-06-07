@@ -5,3 +5,18 @@
 p {
   @apply font-sans;
 }
+.h3 {
+  @apply text-lg;
+    font-weight: 600;
+    font-size: 1.25em;
+    margin-top: 1.6em;
+    margin-bottom: 0.6em;
+    line-height: 1.6;
+}
+.h4 {
+    color: #111827;
+    font-weight: 600;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    line-height: 1.5;
+}

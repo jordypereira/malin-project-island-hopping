@@ -22,11 +22,11 @@ var myIcon = L.icon({
   tooltipAnchor: [19, -26],
 });
 
-function getEventText ({id, day, hour, hour2, minute = '00'}) {
+function getEventText ({id, day, hour, hour2, minute2, minute = '00'}) {
   let text = `Konsert ${id}<br> ${day}. juli<br> ${hour}:${minute}`
 
   if (hour2) {
-    text = text.concat(`<br> ${hour2}:${minute}`)
+    text = text.concat(`<br> ${hour2}:${minute2 || '00'}`)
   }
 
   return text
