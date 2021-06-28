@@ -10,6 +10,7 @@ interface event {
 
 export const events: Array<event> = [
   {
+    // Hovedøya Konsert 1
     id: 1,
     day: '8. & 11',
     hour: 11,
@@ -17,18 +18,21 @@ export const events: Array<event> = [
     points: [59.8964267, 10.7287610]
   },
   {
+    // Hovedøya Konsert 2
     id: 2,
     day: '8. & 11',
     hour: 13,
     points: [59.897231, 10.729286]
   },
   {
+    // Hovedøya Konsert 3
     id: 3,
     day: '8. & 11',
     hour: 15,
     points: [59.8954658, 10.7290597]
   },
   {
+    // Gressholmen Konsert 1
     id: '1 & 2',
     day: 9,
     hour: 11,
@@ -36,13 +40,8 @@ export const events: Array<event> = [
     hour2: 13,
     points: [59.884168268723364, 10.722233481109127]
   },
-  // {
-  //   id: 1,
-  //   day: 10,
-  //   hour: 11,
-  //   points: [59.87102156506349, 10.724683602702436]
-  // },
   {
+    // Langøyene Konsert 1
     id: 1,
     day: 10,
     hour: 11,
@@ -50,6 +49,7 @@ export const events: Array<event> = [
     points: [59.87004589372316, 10.719559849870075]
   },
   {
+    // Langøyene Konsert 2
     id: 2,
     day: 10,
     hour: 13,
