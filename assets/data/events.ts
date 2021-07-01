@@ -60,7 +60,7 @@ export const events: Array<event> = [
     // Langøyene Konsert 1 (Hvis mye vind) 
     id: 3,
     day: 10,
-    hour: 13
+    hour: 13,
     points: [59.8715544, 10.7160208]
   },
   ]
