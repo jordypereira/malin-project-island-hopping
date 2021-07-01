@@ -45,15 +45,16 @@ export const events: Array<event> = [
     // Langøyene Konsert 1
     id: 1,
     day: 10,
-    hour: 11,
-    minute: 45,
+    hour: 13,
+    minute: 00,
     points: [59.8711325, 10.7212618]
   },
   {
     // Langøyene Konsert 2
     id: 2,
     day: 10,
-    hour: 13,
+    hour: 11,
+    minute: 45,
     points: [59.86908715135448, 10.718502261792198]
   },
 ]
