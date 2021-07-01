@@ -47,7 +47,7 @@ export const events: Array<event> = [
     day: 10,
     hour: 11,
     minute: 45,
-    points: [59.87004589372316, 10.719559849870075]
+    points: [59.8711325, 10.7212618]
   },
   {
     // Langøyene Konsert 2
