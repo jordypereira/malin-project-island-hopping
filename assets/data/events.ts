@@ -38,7 +38,7 @@ export const events: Array<event> = [
     hour: 16,
     minute: 30,
     hour2: 17,
-    minute: 30,
+    minute2: 30,
     points: [59.884168268723364, 10.722233481109127]
   },
   {
