@@ -46,7 +46,6 @@ export const events: Array<event> = [
     id: 1,
     day: 10,
     hour: 13,
-    minute: 00,
     points: [59.8711325, 10.7212618]
   },
   {
