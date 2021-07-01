@@ -65,4 +65,4 @@ export const events: Array<event> = [
     minute: 00,
     points: [59.8715544, 10.7160208]
   },
-]
+  ]
