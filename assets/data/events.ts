@@ -35,9 +35,10 @@ export const events: Array<event> = [
     // Gressholmen Konsert 1
     id: '1 & 2',
     day: 9,
-    hour: 11,
+    hour: 16,
     minute: 30,
-    hour2: 13,
+    hour2: 17,
+    minute: 30,
     points: [59.884168268723364, 10.722233481109127]
   },
   {
@@ -45,7 +46,7 @@ export const events: Array<event> = [
     id: 1,
     day: 10,
     hour: 11,
-    minute: 30,
+    minute: 45,
     points: [59.87004589372316, 10.719559849870075]
   },
   {
