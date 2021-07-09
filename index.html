@@ -5,7 +5,6 @@
   <meta charset="UTF-8" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer></script>
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Chewy&display=swap">
@@ -13,6 +12,7 @@
     rel="stylesheet">
 
   <!-- Scripts -->
+  <script src="https://unpkg.com/alpinejs@3.2.1/dist/cdn.min.js" defer></script>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
     integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
     crossorigin />
@@ -90,10 +90,12 @@
     <!-- Intro -->
     <section>
       <p class="text-center mt-8 mx-4">Velkommen til utendørskonserter på øyene i Oslofjorden i sommer! <br>
-        Vi er en strykekvartett som har satt sammen et spennende konsertprogram med klassisk musikk med innslag av jazz og tango. Etter lang tid uten mulighet til å oppleve levende musikk gleder vi oss veldig til å gi
+        Vi er en strykekvartett som har satt sammen et spennende konsertprogram med klassisk musikk med innslag av jazz
+        og tango. Etter lang tid uten mulighet til å oppleve levende musikk gleder vi oss veldig til å gi
         nye kulturopplevelser tilbake til Oslos befolkning. Øyene i Oslofjorden er et perfekt sted for rekreasjon,
         piknik, familie og venner. I sommer vil du også få mulighet til å oppleve musikk ute i naturen når du besøker
-        øyene i Oslofjorden. Konsertene vil vare omtrent 30-40 minutter og er gratis for publikum. Sjekk ut kartet for å se hvor og når vi spiller.
+        øyene i Oslofjorden. Konsertene vil vare omtrent 30-40 minutter og er gratis for publikum. Sjekk ut kartet for å
+        se hvor og når vi spiller.
       </p>
     </section>
   </header>
@@ -112,7 +114,15 @@
             <h4 class="text-lg mb-3 text-gray-700" x-text="item.date"></h4>
             <ul>
               <template x-for="(event, index) in item.events" :key="index">
-                <li x-text="event"></li>
+                <li>
+                  <span x-text="event.text"></span>
+                  <template x-if="event.points">
+                    <a class="text-blue-700"
+                      :href="`https://www.google.com/maps/dir//${item.location}/@${event.points},14z`">
+                      Veibeskrivelse
+                    </a>
+                  </template>
+                </li>
               </template>
             </ul>
           </div>
@@ -172,34 +182,58 @@
             location: 'Hovedøya',
             date: 'Torsdag 08.07',
             events: [
-              '11:30 Konsert 1',
-              '13:00 Konsert 2',
-              '14:30 Konsert 3'
+              {
+                text: '11:30 Konsert 1',
+                points: [59.8964267, 10.7287610]
+              },
+              {
+                text: '13:00 Konsert 2',
+                points: [59.8968404, 10.7299388]
+              },
+              {
+                text: '14:30 Konsert 3',
+                points: [59.8954658, 10.7290597]
+              },
             ]
           },
           {
             location: 'Gressholmen',
             date: 'Fredag 09.07',
             events: [
-              '16:30 Konsert 1',
-              '17:30 Konsert 2',
-            ]
+              { text: '16:30 Konsert 1', points: [59.884168268723364, 10.722233481109127] },
+              { text: '17:30 Konsert 2', points: [59.884168268723364, 10.722233481109127] },
+            ],
           },
           {
             location: 'Langøyene',
             date: 'Lørdag 10.07',
             events: [
-              '11:45 Konsert 1',
-              '13:00 Konsert 2',
+              {
+                text: '11:45 Konsert 1',
+                points: [59.86908715135448, 10.718502261792198]
+              },
+              {
+                text: '13:00 Konsert 2',
+                points: [59.8711325, 10.7212618],
+              },
             ]
           },
           {
             location: 'Hovedøya',
             date: 'Søndag 11.07',
             events: [
-              '11:30 Konsert 1',
-              '13:00 Konsert 2',
-              '14:30 Konsert 3'
+              {
+                text: '11:30 Konsert 1',
+                points: [59.8964267, 10.7287610]
+              },
+              {
+                text: '13:00 Konsert 2',
+                points: [59.8968404, 10.7299388]
+              },
+              {
+                text: '14:30 Konsert 3',
+                points: [59.8954658, 10.7290597]
+              },
             ]
           },
         ]
