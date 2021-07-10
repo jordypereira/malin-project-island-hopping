@@ -114,7 +114,7 @@
             <h4 class="text-lg mb-3 text-gray-700" x-text="item.date"></h4>
             <ul>
               <template x-for="(event, index) in item.events" :key="index">
-                <li>
+                <li :class="{'line-through': item.location === 'Langøyene'}">
                   <span x-text="event.text"></span>
                   <template x-if="event.points">
                     <a class="text-blue-700"
@@ -206,7 +206,7 @@
           },
           {
             location: 'Langøyene',
-            date: 'Lørdag 10.07',
+            date: 'AVLYST grunnet store mengder med regn',
             events: [
               {
                 text: '11:45 Konsert 1',
