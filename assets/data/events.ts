@@ -10,26 +10,20 @@ interface event {
 
 export const events: Array<event> = [
   {
-    // Hovedøya Konsert 1
-    id: 1,
+    // Hovedøya Konsert 1 & 3
+    id: '1 & 3',
     day: '8. & 11',
     hour: 11,
     minute: 30,
-    points: [59.8964267, 10.7287610]
+    hour2: 14,
+    minute2: 30,
+    points: [59.896511, 10.728561]
   },
   {
     // Hovedøya Konsert 2
     id: 2,
     day: '8. & 11',
     hour: 13,
-    points: [59.8968404, 10.7299388]
-  },
-  {
-    // Hovedøya Konsert 3
-    id: 3,
-    day: '8. & 11',
-    hour: 14,
-    minute: 30,
     points: [59.8954658, 10.7290597]
   },
   {
