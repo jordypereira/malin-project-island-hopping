@@ -63,9 +63,9 @@
         <!-- Image -->
         <template x-for="item in items">
           <img width="1024" height="682.484" x-show="item === String(slide)"
-            :src="`/assets/images/slides/slide${item}-1024w.jpeg`" alt="Bilde av strykekvartett" :srcset="`/assets/images/slides/slide${item}-1024w.jpeg 1024w, 
-          /assets/images/slides/slide${item}-768w.jpeg 768w, 
-          /assets/images/slides/slide${item}-360w.jpeg 360w` 
+            :src="`/assets/images/slides/slide${getCurrentSlide()}-1024w.jpeg`" alt="Bilde av strykekvartett" :srcset="`/assets/images/slides/slide${getCurrentSlide()}-1024w.jpeg 1024w, 
+          /assets/images/slides/slide${getCurrentSlide()}-768w.jpeg 768w, 
+          /assets/images/slides/slide${getCurrentSlide()}-360w.jpeg 360w` 
           " sizes="(max-width: 360px) 360px, (max-width: 768px) 768px,
             1024px">
         </template>
@@ -168,9 +168,9 @@
     function slides () {
       return {
         slide: 1,
-        items: ['1', '2', '3', '4', '5'],
+        items: ['4', '1', '2', '3', '5'],
         length: 3,
-        getUrl (id) { return `./assets/images/slide${id}.jpeg` },
+        getCurrentSlide () { return this.items[this.slide - 1] },
         setPreviousSlide () { this.slide = this.slide === 1 ? this.items.length : this.slide - 1 },
         setNextSlide () {
           this.slide = this.slide === this.items.length ? 1 : this.slide + 1
