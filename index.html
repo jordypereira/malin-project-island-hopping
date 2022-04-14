@@ -23,15 +23,15 @@
   <title>Øyhoppende strykekvartett</title>
   <link rel="icon" type="image/png" href="favicon.png" />
   <meta name="description"
-    content="Strykekvartett spiller gratis utendørskonserter på øyene i Oslofjorden 8.-11. juli 2021.">
-  <meta name="keywords" content="gratis, konserter, Oslo">
+    content="Strykekvartett spiller gratis utendørskonserter på øyene i Oslofjorden 7.-10. juli 2022.">
+  <meta name="keywords" content="gratis, konserter, Oslo, strykekvartett, utendørs, oslofjorden">
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://oyhoppendekvartett.malinmertens.com/">
   <meta property="og:title" content="Øyhoppende strykekvartett">
   <meta property="og:description"
-    content="Strykekvartett spiller gratis utendørskonserter på øyene i Oslofjorden 8.-11. juli 2021.">
+    content="Strykekvartett spiller gratis utendørskonserter på øyene i Oslofjorden 7.-10. juli 2022.">
   <meta property="og:image" content="/assets/images/slide1.jpeg">
 
   <!-- Twitter -->
@@ -39,7 +39,7 @@
   <meta property="twitter:url" content="https://oyhoppendekvartett.malinmertens.com/">
   <meta property="twitter:title" content="Øyhoppende strykekvartett">
   <meta property="twitter:description"
-    content="Strykekvartett spiller gratis utendørskonserter på øyene i Oslofjorden 8.-11. juli 2021.">
+    content="Strykekvartett spiller gratis utendørskonserter på øyene i Oslofjorden 7.-10. juli 2022.">
   <meta property="twitter:image" content="/assets/images/slide1.jpeg">
 </head>
 
@@ -83,7 +83,7 @@
         <div class="absolute w-full bottom-0 text-white flex flex-col items-center">
           <h1 class="font-secondary text-center text-3xl lg:text-7xl lg:mb-4">Øyhoppende strykekvartett</h1>
           <h2 class="font-secondary uppercase text-xl lg:text-4xl ">Hovedøya - Gressholmen - Langøyene</h2>
-          <time class="font-secondary text-lg lg:text-3xl">8. - 11. juli</time>
+          <time class="font-secondary text-lg lg:text-3xl">7. - 10. juli 2022</time>
         </div>
       </div>
     </section>
@@ -94,7 +94,7 @@
         og tango. Etter lang tid uten mulighet til å oppleve levende musikk gleder vi oss veldig til å gi
         nye kulturopplevelser tilbake til Oslos befolkning. Øyene i Oslofjorden er et perfekt sted for rekreasjon,
         piknik, familie og venner. I sommer vil du også få mulighet til å oppleve musikk ute i naturen når du besøker
-        øyene i Oslofjorden. Konsertene varerer omtrent 30 minutter og er gratis for publikum. Hvis du vil støtte oss
+        øyene i Oslofjorden. Konsertene varerer omtrent 30-45 minutter og er gratis for publikum. Hvis du vil støtte oss
         kan du gjerne Vippse ditt bidrag til 700523. Sjekk ut kartet for å
         se hvor og når vi spiller.
       </p>
@@ -115,7 +115,7 @@
             <h4 class="text-lg mb-3 text-gray-700" x-text="item.date"></h4>
             <ul>
               <template x-for="(event, index) in item.events" :key="index">
-                <li :class="{'line-through': item.location === 'Langøyene'}">
+                <li>
                   <span x-text="event.text"></span>
                   <template x-if="event.points">
                     <a class="text-blue-700"
@@ -149,10 +149,10 @@
 
   <!-- Sponsors -->
   <footer>
-    <img class="mx-auto w-48" width="192" height="136" src="./assets/images/Furestiftelsen_Logo_Svart-ai.svg"
-      alt="Sponsor logo">
+    <img class="mx-auto w-48" width="192" height="136" src="./assets/images/Bergesenstiftelsen-primaerlogo-svart.svg"
+      alt="Sponsor logo Bergesenstiftelsen">
     <a class="block text-center" href="/assets/poster.pdf" target="_blank">
-      <span>plakat</span>
+      <span>plakat fra 2021</span>
       <svg xmlns="http://www.w3.org/2000/svg" class="inline h-5 w-5 mb-0.5" viewBox="0 0 20 20" fill="currentColor">
         <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
         <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
@@ -181,59 +181,51 @@
         items: [
           {
             location: 'Hovedøya',
-            date: 'Torsdag 08.07',
+            date: 'Torsdag 07.07',
             events: [
               {
-                text: '11:30 Konsert 1',
+                text: 'TBA',
                 points: [59.8964267, 10.7287610]
               },
               {
-                text: '13:00 Konsert 2',
+                text: 'TBA',
                 points: [59.8968404, 10.7299388]
-              },
-              {
-                text: '14:30 Konsert 3',
-                points: [59.8954658, 10.7290597]
               },
             ]
           },
           {
             location: 'Gressholmen',
-            date: 'Fredag 09.07',
+            date: 'Fredag 08.07',
             events: [
-              { text: '16:30 Konsert 1', points: [59.884168268723364, 10.722233481109127] },
-              { text: '17:30 Konsert 2', points: [59.884168268723364, 10.722233481109127] },
+              { text: 'TBA', points: [59.884168268723364, 10.722233481109127] },
+              { text: 'TBA', points: [59.884168268723364, 10.722233481109127] },
             ],
           },
           {
-            location: 'Langøyene',
-            date: 'AVLYST pga været',
+            location: 'Hovedøya',
+            date: 'Lørdag 09.07',
             events: [
               {
-                text: '11:45 Konsert 1',
+                text: '11:30 Konsert 1',
                 points: [59.86908715135448, 10.718502261792198]
               },
               {
-                text: '13:00 Konsert 2',
+                text: '13:30 Konsert 2',
                 points: [59.8711325, 10.7212618],
               },
             ]
           },
           {
-            location: 'Hovedøya',
-            date: 'Søndag 11.07',
+            location: 'Langøyene',
+            date: 'Søndag 10.07',
             events: [
               {
-                text: '11:30 Konsert 1',
+                text: '12:00 Konsert 1',
                 points: [59.896511, 10.728561]
               },
               {
-                text: '13:00 Konsert 2',
+                text: '14:00 Konsert 2',
                 points: [59.8954658, 10.7290597]
-              },
-              {
-                text: '14:30 Konsert 3',
-                points: [59.896511, 10.728561]
               },
             ]
           },
