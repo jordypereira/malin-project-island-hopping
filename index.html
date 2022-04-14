@@ -63,9 +63,9 @@
         <!-- Image -->
         <template x-for="item in items">
           <img width="1024" height="682.484" x-show="item === String(slide)"
-            :src="`./assets/images/slide${item}-1024w.jpg`" alt="Bilde av strykekvartett" :srcset="`./assets/images/slide${item}-1024w.jpg 1024w, 
-          ./assets/images/slide${item}-768w.jpg 768w, 
-          ./assets/images/slide${item}-360w.jpg 360w` 
+            :src="`/assets/images/slides/slide${item}-1024w.jpeg`" alt="Bilde av strykekvartett" :srcset="`/assets/images/slides/slide${item}-1024w.jpeg 1024w, 
+          /assets/images/slides/slide${item}-768w.jpeg 768w, 
+          /assets/images/slides/slide${item}-360w.jpeg 360w` 
           " sizes="(max-width: 360px) 360px, (max-width: 768px) 768px,
             1024px">
         </template>
@@ -137,8 +137,8 @@
         <article class="flex justify-center w-full flex-wrap lg:flex-nowrap"
           :class="{'lg:flex-row-reverse': index % 2 !== 0}">
           <div>
-            <img width="192" height="288" class="lg:max-w-48 h-auto" :src="`./assets/images/${item.id}-192w.jpg`"
-              :alt="item.alt">
+            <img width="192" height="288" class="lg:max-w-48 h-auto"
+              :src="`/assets/images/profiles/${item.id}-192w.jpg`" :alt="item.alt">
           </div>
           <p class="flex items-center p-4 lg:p-0" :class="{'lg:ml-6': index % 2 === 0, 'lg:mr-6': index % 2 !== 0}"
             x-text="item.text">
@@ -165,19 +165,19 @@
     </p>
   </footer>
   <script>
-    function slides() {
+    function slides () {
       return {
         slide: 1,
         items: ['1', '2', '3', '4', '5'],
         length: 3,
-        getUrl(id) { return `./assets/images/slide${id}.jpeg` },
-        setPreviousSlide() { this.slide = this.slide === 1 ? this.items.length : this.slide - 1 },
-        setNextSlide() {
+        getUrl (id) { return `./assets/images/slide${id}.jpeg` },
+        setPreviousSlide () { this.slide = this.slide === 1 ? this.items.length : this.slide - 1 },
+        setNextSlide () {
           this.slide = this.slide === this.items.length ? 1 : this.slide + 1
         },
       }
     }
-    function events() {
+    function events () {
       return {
         items: [
           {
@@ -233,7 +233,7 @@
         ]
       }
     }
-    function bio() {
+    function bio () {
       return {
         items: [
           {
