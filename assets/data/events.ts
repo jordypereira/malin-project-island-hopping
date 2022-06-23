@@ -27,26 +27,17 @@ export const events: Array<event> = [
   },
   {
     // Gressholmen Konsert 1
-    id: '1 & 2',
+    id: '1',
     day: 8,
-    hour: 16,
+    hour: 17,
     minute: 30,
-    hour2: 17,
-    minute2: 30,
     points: [59.884168268723364, 10.722233481109127]
   },
   {
     // Langøyene Konsert 1
     id: 1,
-    day: 11,
+    day: 10,
     hour: 12,
-    points: [59.86908715135448, 10.718502261792198]
-  },
-  {
-    // Langøyene Konsert 2
-    id: 2,
-    day: 11,
-    hour: 14,
     points: [59.8711325, 10.7212618]
   },
   ]
