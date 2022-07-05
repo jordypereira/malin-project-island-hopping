@@ -15,7 +15,7 @@ export const events: Array<event> = [
     day: '7. & 9',
     hour: 11,
     minute: 30,
-    points: [59.896511, 10.728561]
+    points: [59.8978423, 10.7308809]
   },
   {
     // Hovedøya Konsert 2

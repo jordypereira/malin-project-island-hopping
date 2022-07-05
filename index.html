@@ -119,8 +119,9 @@
                 <li>
                   <span x-text="event.text"></span>
                   <template x-if="event.points">
+                    <!-- https://developers.google.com/maps/documentation/urls/get-started#search-action -->
                     <a class="text-blue-700"
-                      :href="`https://www.google.com/maps/dir//${item.location}/@${event.points},14z`">
+                      :href="`https://www.google.com/maps/dir/?api=1&destination=${event.points}`">
                       Veibeskrivelse
                     </a>
                   </template>
@@ -182,20 +183,22 @@
         items: [
           {
             location: 'Hovedøya',
+            locationName: 'Hovedøya,+0150+Oslo,+Norge',
             date: 'Torsdag 07.07',
             events: [
               {
                 text: '11:30 Konsert 1',
-                points: [59.8964267, 10.7287610]
+                points: [59.8978423, 10.7308809]
               },
               {
                 text: '13:30 Konsert 2',
-                points: [59.8968404, 10.7299388]
+                points: [59.8954658, 10.7290597]
               },
             ]
           },
           {
             location: 'Gressholmen',
+            locationName: 'Gressholmen',
             date: 'Fredag 08.07',
             events: [
               {
@@ -206,11 +209,12 @@
           },
           {
             location: 'Hovedøya',
+            locationName: 'Hovedøya,+0150+Oslo,+Norge',
             date: 'Lørdag 09.07',
             events: [
               {
                 text: '11:30 Konsert 1',
-                points: [59.86908715135448, 10.718502261792198]
+                points: [59.8978423, 10.7308809]
               },
               {
                 text: '13:30 Konsert 2',
@@ -220,6 +224,7 @@
           },
           {
             location: 'Langøyene',
+            locationName: 'Langoyene',
             date: 'Søndag 10.07',
             events: [
               {
