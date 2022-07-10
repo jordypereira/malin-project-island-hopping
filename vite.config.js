@@ -6,7 +6,7 @@ export default {
     WindiCSS()
   ],
   server: {
-    port: 3030
+    port: 3000
   },
   preview: {
     port: 8080
