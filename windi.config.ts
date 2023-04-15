@@ -7,7 +7,7 @@ export default defineConfig({
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Open Sans", 'ui-sans-serif', 'system-ui'],
+        sans: ['chewy', 'serif', 'system-ui'],
         secondary: ['chewy', 'serif'],
       },
     }
