@@ -10,6 +10,10 @@
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" />
   <link media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Chewy&display=swap"
     rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
     
   <!-- Scripts -->
   <script src="https://unpkg.com/alpinejs@3.10.2/dist/cdn.min.js" defer></script>
@@ -40,8 +44,8 @@
     content="Strykekvartett spiller gratis utendørskonserter på øyene i Oslofjorden 13.-16. juli 2023." />
   <meta property="twitter:image" content="/assets/images/slide1.jpeg" />
 </head>
-
 <body class="mx-auto bg-gray-100" style="max-width: 1024px" x-data="{ language: 'norwegian' }">
+
   <!-- Slides -->
   <header>
     <section class="mt-8 flex justify-center">
@@ -116,11 +120,11 @@ Vi håper at du vil bli med oss på øyhoppende eventyr i Oslofjorden denne somm
     </section>
     <!-- Contact Button -->
     <section class="my-12 flex flex-col items-center">
-      <p class="text-gray-800 text-sm">malinmertens@gmail.com</p>
+      <p class="text-gray-800 text-sm"></p>
       <a href="mailto:malinmertens@gmail.com" target="_blank" rel="noopener"
         class="m-4 border-2 border-black px-8 py-2 rounded hover:bg-black hover:text-white transition duration-200">
-        <span x-show="language === 'english'">Contact</span>
-        <span x-show="language === 'norwegian'">Kontakt</span>
+        <span x-show="language === 'english'">Contact us</span>
+        <span x-show="language === 'norwegian'">Kontakt oss</span>
       </a>
       
     </section>
