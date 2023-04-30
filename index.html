@@ -6,11 +6,10 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" />
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" />
-  <link media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Chewy&display=swap"
-    rel="stylesheet" />
-    
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Noto+Sans&display=swap" rel="stylesheet">
+
   <!-- Scripts -->
   <script src="https://unpkg.com/alpinejs@3.10.2/dist/cdn.min.js" defer></script>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
@@ -40,7 +39,68 @@
     content="Strykekvartett spiller gratis utendørskonserter på øyene i Oslofjorden 13.-16. juli 2023." />
   <meta property="twitter:image" content="/assets/images/slide1.jpeg" />
 </head>
+
 <body class="mx-auto bg-gray-100" style="max-width: 1024px" x-data="{ language: 'norwegian' }">
+
+  <!-- Navigation -->
+  <section id="navigation" data-test="navigation" data-scroll-header>
+    <nav class="flex justify-between items-center py-4 px-8">
+      <a href="/" class="font-secondary">
+        Home
+      </a>
+      <div class="flex items-center" x-data="{ open: false }">
+        <!-- Hamburger menu -->
+        <button class="lg:hidden z-11" aria-label="open menu" x-on:click="open = !open">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-gray-800" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path x-show="!open" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+              d="M4 6h16M4 12h16M4 18h16" />
+            <path x-show="open" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+              d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+        <!-- Mobile menu -->
+        <ul
+          class="lg:hidden absolute top-0 left-0 w-full h-screen bg-gray-100 flex flex-col items-center justify-center z-10"
+          x-show="open" x-on:click.away="open = false">
+          <li>
+            <a data-scroll href="#about" class="font-secondary text-lg lg:text-xl">Om oss</a>
+          </li>
+          <li>
+            <a data-scroll href="#concerts" class="font-secondary text-lg lg:text-xl">Konserter</a>
+          </li>
+          <li>
+            <a data-scroll href="#contact" class="font-secondary text-lg lg:text-xl">Kontakt</a>
+          </li>
+          <li>
+            <a data-scroll href="#mapid" class="font-secondary text-lg lg:text-xl">Kart</a>
+          </li>
+          <li>
+            <a data-scroll href="#sponsors" class="font-secondary text-lg lg:text-xl">Sponsorer</a>
+          </li>
+        </ul>
+        <!-- Desktop menu -->
+        <ul class="hidden lg:flex lg:space-x-8">
+          <li>
+            <a data-scroll href="#about" class="font-secondary text-lg lg:text-xl">Om oss</a>
+          </li>
+          <li>
+            <a data-scroll href="#concerts" class="font-secondary text-lg lg:text-xl">Konserter</a>
+          </li>
+          <li>
+            <a data-scroll href="#contact" class="font-secondary text-lg lg:text-xl">Kontakt</a>
+          </li>
+          <li>
+            <a data-scroll href="#mapid" class="font-secondary text-lg lg:text-xl">Kart</a>
+          </li>
+          <li>
+            <a data-scroll href="#sponsors" class="font-secondary text-lg lg:text-xl">Sponsorer</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+  </section>
 
   <!-- Slides -->
   <header>
@@ -101,31 +161,45 @@
     </section> -->
     <!-- Intro -->
     <section>
-      <p class="text-left mt-12 mx-4 mb-4"> 
-Vi ønsker deg velkommen til å oppleve utendørskonserter på øyene i Oslofjorden denne sommeren! Konsertene er for deg som vil nyte klassisk musikk i vakre omgivelser og helt gratis. Musikerne, en strykekvartett, har satt sammen et spennende konsertprogram som vil bli fremført på tre forskjellige øyer; Hovedøya, Gressholmen og Langøyene. Du kan se nærmere på kartet for å finne ut tidspunkter og hvor konsertene vil finne sted.
-<br>
-<br>
-Hovedøya vil være vert for fire konserter, to på torsdag 13.07 og to på lørdag 15.07. Begge disse dagene vil ha to separate spilletider. På Gressholmen Kro vil ha en konsert på fredag 14.07, mens Langøyene vil ha en konsert på søndag 16.07. Du kan planlegge en flott dag ute med venner og familie ved å bruke kartet på nettsiden. Vi anbefaler også å sjekke reisetidene med Ruter.
-<br>
-<br>
-Takk til våre støttespillere Bergesen stiftelsen og Norsk Tonekunstnersamfund for deres bidrag til å gjøre denne sommerens øykonserter mulig! Vi setter stor pris på deres støtte til vårt arbeid med å tilby gratis kulturarrangementer til alle. Hvis du også ønsker å støtte strykekvartetten, kan du Vippse et bidrag til 700523. Dette vil hjelpe musikerne å fortsette med sine fantastiske konserter i sommer. 
-<br>
-<br>
-Vi håper at du vil bli med oss på øyhoppende eventyr i Oslofjorden denne sommeren. Besøk en av de tre øyene for å få en sommeropplevelse utenom det vanlige. Vi gleder oss til å se deg der!
+      <p class="text-left mt-12 mx-4 mb-4">
+        Vi ønsker deg velkommen til å oppleve utendørskonserter på øyene i Oslofjorden denne sommeren! Konsertene er for
+        deg som vil nyte klassisk musikk i vakre omgivelser og helt gratis. Musikerne, en strykekvartett, har satt
+        sammen et spennende konsertprogram som vil bli fremført på tre forskjellige øyer; Hovedøya, Gressholmen og
+        Langøyene. Du kan se nærmere på kartet for å finne ut tidspunkter og hvor konsertene vil finne sted.
+        <br>
+        <br>
+        Hovedøya vil være vert for fire konserter, to på torsdag 13.07 og to på lørdag 15.07. Begge disse dagene vil ha
+        to separate spilletider. På Gressholmen Kro vil ha en konsert på fredag 14.07, mens Langøyene vil ha en konsert
+        på søndag 16.07. Du kan planlegge en flott dag ute med venner og familie ved å bruke kartet på nettsiden. Vi
+        anbefaler også å sjekke reisetidene med Ruter.
+        <br>
+        <br>
+        Takk til våre støttespillere Bergesen stiftelsen og Norsk Tonekunstnersamfund for deres bidrag til å gjøre denne
+        sommerens øykonserter mulig! Vi setter stor pris på deres støtte til vårt arbeid med å tilby gratis
+        kulturarrangementer til alle. Hvis du også ønsker å støtte strykekvartetten, kan du Vippse et bidrag til 700523.
+        Dette vil hjelpe musikerne å fortsette med sine fantastiske konserter i sommer.
+        <br>
+        <br>
+        Vi håper at du vil bli med oss på øyhoppende eventyr i Oslofjorden denne sommeren. Besøk en av de tre øyene for
+        å få en sommeropplevelse utenom det vanlige. Vi gleder oss til å se deg der!
       </p>
     </section>
     <!-- Contact Button -->
-    <section class="my-12 flex flex-col items-center">
+    <section class="my-12 flex flex-col items-center font-secondary" id="contact">
       <p class="text-gray-800 text-sm"></p>
       <a href="mailto:malinmertens@gmail.com" target="_blank" rel="noopener"
         class="m-4 border-2 border-black px-8 py-2 rounded hover:bg-black hover:text-white transition duration-200">
         <span x-show="language === 'english'">Contact us</span>
         <span x-show="language === 'norwegian'">Kontakt oss</span>
       </a>
-      
+
     </section>
     <p class="text-left my-2 mx-4">
-      Vi tilbyr også andre oppdrag i tillegg til musikkarrangementene på øyene i Oslofjorden. Ta gjerne kontakt med oss for mer informasjon om vårt arbeid og hvordan du kan støtte oss. Vi tar utgangspunkt i frilanssatsene til CREO når vi fastsetter våre honorarer for oppdragene vi tilbyr. Vi setter pris på all hjelp vi kan få for å kunne fortsette å tilby gratis kulturarrangementer til alle. Takk for din støtte, og vi håper å se deg på en av våre arrangementer snart!</p>
+      Vi tilbyr også andre oppdrag i tillegg til musikkarrangementene på øyene i Oslofjorden. Ta gjerne kontakt med oss
+      for mer informasjon om vårt arbeid og hvordan du kan støtte oss. Vi tar utgangspunkt i frilanssatsene til CREO når
+      vi fastsetter våre honorarer for oppdragene vi tilbyr. Vi setter pris på all hjelp vi kan få for å kunne fortsette
+      å tilby gratis kulturarrangementer til alle. Takk for din støtte, og vi håper å se deg på en av våre arrangementer
+      snart!</p>
   </header>
 
   <!-- Map -->
@@ -133,10 +207,10 @@ Vi håper at du vil bli med oss på øyhoppende eventyr i Oslofjorden denne somm
 
   <main>
     <!-- Timetable -->
-    <section class="my-8 mx-auto">
+    <section class="my-8 mx-auto" id="concerts">
       <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
         <template x-data="events()" x-for="item in items" :key="item.date">
-          <div class="mx-auto px-8 text-center">
+          <div class="mx-auto px-8 text-center font-secondary">
             <h3 class="text-2xl text-bold" x-text="item.location"></h3>
             <h4 class="text-lg mb-3 text-gray-700" x-text="item.date"></h4>
             <ul>
@@ -157,8 +231,9 @@ Vi håper at du vil bli med oss på øyhoppende eventyr i Oslofjorden denne somm
         </template>
       </div>
     </section>
+
     <!-- Profiles -->
-    <section class="my-8 flex space-y-8 flex-col">
+    <section class="my-8 flex space-y-8 flex-col" id="about">
       <template x-data="{...bio()}" x-for="(item, index) in items" :key="index">
         <article class="flex justify-center w-full flex-wrap lg:flex-nowrap"
           :class="{'lg:flex-row-reverse': index % 2 !== 0}">
@@ -174,17 +249,13 @@ Vi håper at du vil bli med oss på øyhoppende eventyr i Oslofjorden denne somm
   </main>
 
   <!-- Sponsors -->
-  <footer>
-    <img class="mx-auto w-48" width="192" height="136" src="./assets/images/Bergesenstiftelsen-primaerlogo-svart.svg"
-      alt="Sponsor logo Bergesenstiftelsen" />
-    <img class="mx-auto w-48" width="192" height="136" src="/assets/images/Logo - Sort.png"
-      alt="Sponsor logo Norsk Tonekunstnersamfund" />
-
-      <svg xmlns="http://www.w3.org/2000/svg" class="inline h-5 w-5 mb-0.5" viewBox="0 0 20 20" fill="currentColor">
-        <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
-        <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
-      </svg>
-    </a>
+  <footer id="sponsors">
+    <div class="flex">
+      <img class="mx-auto w-48" width="192" height="136" src="./assets/images/Bergesenstiftelsen-primaerlogo-svart.svg"
+        alt="Sponsor logo Bergesenstiftelsen" />
+      <img class="mx-auto w-92" width="2720" height="606" src="/assets/images/tonekunst.png"
+        alt="Sponsor logo Norsk Tonekunstnersamfund" />
+    </div>
     <p class="text-center text-xs my-4">
       Fotograf
       <a class="text-blue-700" rel="noopener" target="_blank" href="http://www.fotografreinertsen.com/">John Petter
@@ -299,6 +370,7 @@ Vi håper at du vil bli med oss på øyhoppende eventyr i Oslofjorden denne somm
   </script>
   <!-- <script type="module" src="/map.ts"></script> -->
   <script type="module" src="/main.js"></script>
+  <script type="module" src="/lib/smooth-scroll.ts"></script>
 </body>
 
 </html>

@@ -1,15 +1,13 @@
-import { defineConfig } from 'windicss/helpers'
+import { defineConfig } from "windicss/helpers";
 
 export default defineConfig({
-  plugins: [
-    require('windicss/plugin/typography'),
-  ],
+  plugins: [require("windicss/plugin/typography")],
   theme: {
     extend: {
       fontFamily: {
-        sans: ['chewy', 'serif', 'system-ui'],
-        secondary: ['chewy', 'serif'],
+        sans: ["Noto Sans", "ui-sans-serif", "system-ui"],
+        secondary: ["chewy", "serif"],
       },
-    }
+    },
   },
-})
+});
