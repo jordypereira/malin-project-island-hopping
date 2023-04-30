@@ -43,8 +43,8 @@
 <body class="mx-auto bg-gray-100" style="max-width: 1024px" x-data="{ language: 'norwegian' }">
 
   <!-- Navigation -->
-  <section id="navigation" data-test="navigation" data-scroll-header>
-    <nav class="fixed top-0 left-0 right-0 z-1010 flex justify-end items-center py-4 px-8">
+  <section id="navigation" data-test="navigation">
+    <nav class="fixed top-0 left-0 right-0 z-1010 flex justify-end items-center py-4 px-8" data-scroll-header>
       <div class="flex items-center" x-data="{ open: false }">
         <!-- Hamburger menu -->
         <button class="lg:hidden z-1011" aria-label="open menu" x-on:click="open = !open">
