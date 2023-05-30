@@ -34,7 +34,7 @@ function getEventText ({id, day, hour, hour2, minute2, minute = '00'}) {
 
 events.forEach((e) => {
   const eventText = getEventText(e)
-  const marker = L.marker(e.points, {
+  L.marker(e.points, {
     icon: myIcon
   }).addTo(map).bindTooltip(eventText, { permanent: false });
 })
