@@ -5,6 +5,7 @@ import 'virtual:windi-devtools'
 // main.js
 import IntroComponent from './components/introduction.svelte';
 import Contact from './components/contact.svelte';
+import Navigation from './components/Navigation.svelte';
 
 const app = new IntroComponent({
   target: document.querySelector('#introduction')
@@ -16,4 +17,9 @@ const contact = new Contact({
 });
 
 
-export { app, contact };
+const navigation = new Navigation({
+  target: document.getElementById('navigation'),
+});
+
+
+export { app, contact, navigation };
