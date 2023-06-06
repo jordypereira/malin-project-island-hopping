@@ -1,7 +1,7 @@
-var map = L.map('mapid').setView([59.8941401, 10.7296017], 15.4);
-import { events } from '/assets/data/events'
- 
+import L from 'leaflet';
 
+var map = L.map('mapid').setView([59.8941401, 10.7296017], 15.4);
+import { events, type EventConcert } from '../../assets/data/events'
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> 1, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -12,7 +12,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   accessToken: 'pk.eyJ1Ijoiam9yZHlwZXJlaXJhIiwiYSI6ImNrb3IwOWRvdzB5Y3AybnN6cGlnbTVmdzUifQ.JeTpr6XvhG_NK2afZOz0ag'
 }).addTo(map);
 
-L.tileLayer.provider('OpenStreetMap.Mapnik').addTo(map);
+// L.tileLayer.provider('OpenStreetMap.Mapnik').addTo(map);
 
 var myIcon = L.icon({
   iconUrl: '/assets/images/concert.png',
@@ -22,8 +22,13 @@ var myIcon = L.icon({
   tooltipAnchor: [19, -26],
 });
 
-function getEventText ({id, day, hour, hour2, minute2, minute = '00'}) {
-  let text = `Konsert ${id}<br> ${day}. juli<br> ${hour}:${minute}`
+function getEventText ({ id, day, hour, hour2, minute2, customText, minute = '00' }: EventConcert) {
+  if (customText) {
+    return customText
+  }
+
+  const hourString = `${hour}:${minute}`
+  let text = `Konsert ${id}<br> ${day}. juli<br> ${hourString}`
 
   if (hour2) {
     text = text.concat(`<br> ${hour2}:${minute2 || '00'}`)

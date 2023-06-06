@@ -1,27 +1,26 @@
-interface event {
+export interface EventConcert {
   id: number | string;
-  day: number | string;
-  hour: number;
-  hour2?: number;
-  minute?: number;
-  minute2?: number;
+  day?: number | string;
   points: [number, number];
+  hour?: number;
+  hour2?: number;
+  minute?: number | string;
+  minute2?: number;
+  customText?: string;
 }
 
-export const events: Array<event> = [
+export const events: Array<EventConcert> = [
   {
     // Hovedøya Konsert 1
     id: 1,
-    day: "13 & 15",
-    hour: 13,
     points: [59.8978423, 10.7308809],
+    customText: "Konsert 1<br> 13. juli - 13:00<br> 15. juli - 14:00",
   },
   {
     // Hovedøya Konsert 2
     id: 2,
-    day: "13 & 15",
-    hour: 15,
     points: [59.8954658, 10.7290597],
+    customText: "Konsert 2<br> 13. juli - 15:00<br> 15. juli - 16:00",
   },
   {
     // Gressholmen Konsert 1

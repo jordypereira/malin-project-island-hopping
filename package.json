@@ -11,17 +11,17 @@
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^2.4.1",
     "@tsconfig/svelte": "^4.0.1",
+    "@types/leaflet": "^1.9.3",
     "@types/node": "^20.2.5",
     "svelte": "^3.59.1",
-    "typescript": "^5.0.4",
-    "vite": "^4.3.9",
     "svelte-check": "^3.3.1",
     "tslib": "^2.5.0",
+    "typescript": "^5.0.4",
+    "vite": "^4.3.9",
     "vite-plugin-windicss": "^1.9.0",
     "windicss": "^3.5.6"
   },
   "dependencies": {
-    "@types/leaflet": "^1.9.3",
     "leaflet": "^1.9.4",
     "sweet-scroll": "^4.0.0"
   }
