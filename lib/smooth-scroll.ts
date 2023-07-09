@@ -1,11 +1,11 @@
-import SweetScroll from "sweet-scroll";
+import SweetScroll from 'sweet-scroll'
 
 document.addEventListener(
-  "DOMContentLoaded",
+  'DOMContentLoaded',
   () => {
     const sweetScroll = new SweetScroll({
       /* some options */
-    });
+    })
   },
-  false
-);
+  false,
+)
