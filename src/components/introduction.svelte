@@ -1,10 +1,10 @@
 <script lang="ts">
-  import { t } from "../plugins/i18n";
+  import { t } from '../plugins/i18n'
 
-  let text;
+  let text
 
   $: {
-    text = $t.intro;
+    text = $t.intro
   }
 </script>
 

@@ -1,4 +1,11 @@
 {
+  "nav": {
+    "about": "Om oss",
+    "concerts": "Konserter",
+    "contact": "Kontakt",
+    "map": "Kart",
+    "sponsors": "Sponsorer"
+  },
   "intro": {
     "p1": "Vi ønsker deg velkommen til å oppleve utendørskonserter på øyene i Oslofjorden denne sommeren! Konsertene er for deg som vil nyte klassisk musikk i vakre omgivelser og helt gratis. Musikerne, en strykekvartett, har satt sammen et spennende konsertprogram som vil bli fremført på tre forskjellige øyer; Hovedøya, Gressholmen og Langøyene. Du kan se nærmere på kartet for å finne ut tidspunkter og hvor konsertene vil finne sted.",
     "p2": "Hovedøya vil være vert for fire konserter, to på torsdag 13.07 og to på lørdag 15.07. Begge disse dagene vil ha to separate spilletider. På Gressholmen Kro vil ha en konsert på fredag 14.07, mens Langøyene vil ha en konsert på søndag 16.07. Du kan planlegge en flott dag ute med venner og familie ved å bruke kartet på nettsiden. Vi anbefaler også å sjekke reisetidene med Ruter.",

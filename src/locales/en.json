@@ -1,4 +1,11 @@
 {
+  "nav": {
+    "about": "About us",
+    "concerts": "Concerts",
+    "contact": "Contact",
+    "map": "Map",
+    "sponsors": "Sponsors"
+  },
   "intro": {
     "p1": "We welcome you to experience outdoor concerts on the islands in the Oslo Fjord this summer! The concerts are for those who want to enjoy classical music in beautiful surroundings and completely free. The musicians, a string quartet, have put together an exciting concert program that will be performed on three different islands; Hovedøya, Gressholmen and Langøyene. You can take a closer look at the map to find out the times and where the concerts will take place.",
     "p2": "Hovedøya will host four concerts, two on Thursday 13.07 and two on Saturday 15.07. Both of these days will have two separate game times. At Gressholmen Kro will have a concert on Friday 14.07, while Langøyene will have a concert on Sunday 16.07. You can plan a great day out with friends and family by using the map on the website. We also recommend checking the journey times with Ruter.",
