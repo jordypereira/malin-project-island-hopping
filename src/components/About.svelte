@@ -1,8 +1,10 @@
 <script lang="ts">
   import { t } from "../plugins/i18n";
 
-  let bios = $t.bios;
-  let items = Object.keys(bios).map(id => ({ id, alt: bios[id].alt, text: bios[id].text }));
+  let items
+  $: { 
+    items = Object.keys($t.bios).map(id => ({ id, alt: bios[id].alt, text: bios[id].text }));
+  }
 </script>
 
 {#each items as item, index (index)}
