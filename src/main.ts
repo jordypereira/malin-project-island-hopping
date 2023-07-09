@@ -7,6 +7,7 @@ import IntroComponent from './components/introduction.svelte'
 import Contact from './components/contact.svelte'
 import Navigation from './components/Navigation.svelte'
 import LanguageSwitcher from './components/LanguageSwitcher.svelte'
+import About from './components/About.svelte'
 
 const app = new IntroComponent({
   target: document.querySelector('#introduction'),
@@ -24,4 +25,8 @@ const languageSwitcher = new LanguageSwitcher({
   target: document.getElementById('language-switcher'),
 })
 
-export { app, contact, navigation, languageSwitcher }
+const about = new About({
+  target: document.getElementById('about'),
+})
+
+export { app, contact, navigation, languageSwitcher, about }
