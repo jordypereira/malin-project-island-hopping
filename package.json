@@ -1,18 +1,26 @@
 {
   "name": "oyhoppende-strykekvartett",
-  "version": "0.0.0",
   "type": "module",
+  "version": "0.0.0",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview",
-    "check": "svelte-check --tsconfig ./tsconfig.json"
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "dependencies": {
+    "leaflet": "^1.9.4",
+    "sweet-scroll": "^4.0.0"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^0.39.7",
     "@sveltejs/vite-plugin-svelte": "^2.4.1",
     "@tsconfig/svelte": "^4.0.1",
     "@types/leaflet": "^1.9.3",
     "@types/node": "^20.2.5",
+    "eslint": "^8.44.0",
     "svelte": "^3.59.1",
     "svelte-check": "^3.3.1",
     "tslib": "^2.5.0",
@@ -20,9 +28,5 @@
     "vite": "^4.3.9",
     "vite-plugin-windicss": "^1.9.0",
     "windicss": "^3.5.6"
-  },
-  "dependencies": {
-    "leaflet": "^1.9.4",
-    "sweet-scroll": "^4.0.0"
   }
 }
