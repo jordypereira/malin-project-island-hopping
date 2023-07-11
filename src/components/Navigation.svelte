@@ -1,5 +1,6 @@
 <script lang="ts">
   import { t } from '../plugins/i18n'
+  import LanguageSwitcher from './LanguageSwitcher.svelte'
 
   let open = false
   let nav
@@ -35,6 +36,10 @@
         </li>
         <li>
           <a data-scroll href="#sponsors" class="font-secondary text-lg lg:text-xl">{nav.sponsors}</a>
+        </li>
+
+        <li class="mt-4">
+          <LanguageSwitcher />
         </li>
       </ul>
       <!-- Horizontal Social bar with icons
@@ -81,6 +86,9 @@
       </li>
       <li>
         <a data-scroll href="#sponsors" class="font-secondary text-lg lg:text-xl">{nav.sponsors}</a>
+      </li>
+      <li>
+        <LanguageSwitcher />
       </li>
       <li>
         <a href="https://www.facebook.com/oyhoppendekvartett" target="_blank" rel="noopener noreferrer">

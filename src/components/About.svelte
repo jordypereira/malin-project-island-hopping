@@ -3,7 +3,7 @@
 
   let items
   $: { 
-    items = Object.keys($t.bios).map(id => ({ id, alt: bios[id].alt, text: bios[id].text }));
+    items = Object.entries($t.bios).map(([id, {alt, text}]) => ({ id, alt, text }));
   }
 </script>
 

@@ -11,17 +11,23 @@ export interface EventConcert {
 
 export const events: Array<EventConcert> = [
   {
-    // Hovedøya Konsert 1
+    // Hovedøya Day 1
     id: 1,
     points: [59.8978423, 10.7308809],
-    customText: 'Konsert 1<br> 13. juli - 13:00<br> 15. juli - 14:00',
+    customText: '13. juli <br> Konsert 1 - 13:00 <br> Konsert 2 - 15:00',
   },
   {
-    // Hovedøya Konsert 2
+    // Hovedøya Day 2
     id: 2,
     points: [59.8954658, 10.7290597],
-    customText: 'Konsert 2<br> 13. juli - 15:00<br> 15. juli - 16:00',
+    customText: '15. juli <br> Konsert 1 - 14:00<br> Konsert 2 - 16:00',
   },
+  // {
+  //   // Hovedøya Konsert 2
+  //   id: 2,
+  //   points: [59.8954658, 10.7290597],
+  //   customText: 'Konsert 2<br> 13. juli - 15:00<br> 15. juli - 16:00',
+  // },
   {
     // Gressholmen Konsert 1
     id: 1,
