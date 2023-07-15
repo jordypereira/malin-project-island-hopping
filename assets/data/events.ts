@@ -14,7 +14,7 @@ export const events: Array<EventConcert> = [
     // Hovedøya Day 1
     id: 1,
     points: [59.8978423, 10.7308809],
-    customText: '13. juli <br> Konsert 1 - 13:00 <br> Konsert 2 - 15:00',
+    customText: '13. juli <br> Konsert 1 - 13:00 <br> Konsert 2 - 15:00<br> 16. juli <br> Konsert 1 - 14:00 ',
   },
   {
     // Hovedøya Day 2
@@ -35,11 +35,11 @@ export const events: Array<EventConcert> = [
     hour: 18,
     points: [59.884168268723364, 10.722233481109127],
   },
-  {
-    // Langøyene Konsert 1
-    id: 1,
-    day: 16,
-    hour: 14,
-    points: [59.8696777, 10.7195264],
-  },
+  // {
+  //   // Langøyene Konsert 1
+  //   id: 1,
+  //   day: 16,
+  //   hour: 14,
+  //   points: [59.8696777, 10.7195264],
+  // },
 ]
