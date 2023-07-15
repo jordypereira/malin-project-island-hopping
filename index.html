@@ -103,17 +103,17 @@
       <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
         <template x-data="events()" x-for="item in items" :key="item.date">
           <div class="mx-auto px-8 text-center font-secondary">
-            <h3 class="text-2xl text-bold" x-bind:class="item.locationOverride ? 'line-through text-gray-700 !text-lg' : ''" x-text="item.location"></h3>
+            <h3 class="text-2xl text-bold"  :class="{'line-through decoration-3': item.cancelled, 'line-through text-gray-700 !text-lg': location.override}" x-text="item.location"></h3>
             <h3 x-if="item.locationOverride" class="text-2xl text-bold" x-text="item.locationOverride"></h3>
-            <h4 class="text-lg mb-3 text-gray-700" x-text="item.date"></h4>
+            <h4 class="text-lg mb-3 text-gray-700"  :class="{'line-through decoration-3': item.cancelled}" x-text="item.date"></h4>
             <h5 class="text-md mb-3 text-red-700" x-if="item.subtext" x-text="item.subtext"></h5>
             <ul>
               <template x-for="(event, index) in item.events" :key="index">
                 <li>
-                  <span x-text="event.text"></span>
+                  <span x-text="event.text" :class="{'line-through decoration-3': item.cancelled}"></span>
                   <template x-if="event.points">
                     <!-- https://developers.google.com/maps/documentation/urls/get-started#search-action -->
-                    <a class="text-blue-700"
+                    <a class="text-blue-700"  :class="{'line-through decoration-3': item.cancelled}"
                       :href="`https://www.google.com/maps/dir/?api=1&destination=${event.points}`">
                       Veibeskrivelse
                     </a>
@@ -201,7 +201,6 @@
           {
             location: 'Hovedøya',
             locationName: 'Hovedøya,+0150+Oslo,+Norge',
-            subtext: '(If it rains we play in Kunstsalen, Lavetthuset)',
             date: 'Lørdag 15.07',
             events: [
               {
@@ -216,9 +215,9 @@
           },
           {
             location: 'Langøyene',
-            locationOverride: 'Hovedøya',
             locationName: 'Langoyene',
-            subtext: 'Because of the rain, we will play at Hovedøya, in Kunstsalen, Lavetthuset',
+            cancelled: true,
+            subtext: 'Cancelled due to illness.',
             date: 'Søndag 16.07',
             events: [
               {
